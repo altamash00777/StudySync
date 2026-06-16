@@ -1,0 +1,84 @@
+.footer {
+  width: 100%;
+  margin-top: 80px;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  border-top: 4px solid #000;
+  box-shadow: 0 -12px 0 #000;
+  color: white;
+}
+
+/* container */
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* BRAND */
+.footer-brand h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ff4d4d, #ffb84d, #4dff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+/* MOTIVATION BOX */
+.footer-motivation {
+  padding: 18px 20px;
+  border: 2px solid #ffffff22;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.footer-motivation:hover {
+  transform: translateY(-3px);
+  border-color: #ffffff55;
+}
+
+.footer-motivation p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  padding-top: 15px;
+  border-top: 1px solid #ffffff22;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

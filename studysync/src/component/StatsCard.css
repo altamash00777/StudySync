@@ -1,0 +1,117 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.features {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 80px 50px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+/* Heading */
+.features h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Card */
+.feature-card {
+  background: white;
+  border: 3px solid black;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 260px;
+}
+
+/* Alternate brutal colors */
+.feature-card:nth-child(2),
+.feature-card:nth-child(4) {
+  background: #ff2d20;
+  color: white;
+}
+
+.feature-card:nth-child(3) {
+  background: black;
+  color: white;
+}
+
+/* Hover */
+.feature-card:hover {
+  transform: translate(-8px, -8px);
+  box-shadow: 8px 8px 0px black;
+}
+
+/* Icon */
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/* Title */
+.feature-card h3 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+/* Description */
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 20px;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+}
