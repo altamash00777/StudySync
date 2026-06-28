@@ -1,28 +1,32 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
+/* MAIN CONTAINER */
 .task-container {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: black;
   padding: 60px 50px;
+  font-family: Arial, sans-serif;
 }
 
-/* Heading */
+/* HEADING */
 .task-container h1 {
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 30px;
-  color: black;
+  color: #d9ff00;
 }
 
-/* Stats Card */
+/* STATS CARD */
 .task-card {
   width: 260px;
-  background: white;
+  background: #d9ff00;
   border: 3px solid black;
   padding: 30px;
   text-align: center;
@@ -35,125 +39,156 @@
   box-shadow: 5px 5px 0 black;
 }
 
-.task-card h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-
-.task-card p {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #ff2d20;
-}
-
-/* Input Section */
+/* INPUT SECTION */
 .task-input-box {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   margin-bottom: 40px;
+  align-items: center;
+  flex-wrap: wrap; /* FIX OVERFLOW */
 }
 
-.task-input-box input {
+/* INPUT + SELECT */
+.task-input-box input,
+.task-input-box select {
   flex: 1;
+  min-width: 180px;
   border: 3px solid black;
   background: white;
-  padding: 18px;
+  padding: 16px;
   font-size: 1rem;
   font-weight: 700;
   outline: none;
 }
 
-.task-input-box input::placeholder {
-  color: #666;
-}
-
+/* BUTTON */
 .task-input-box button {
   border: 3px solid black;
-  background: #ff2d20;
-  color: white;
-  padding: 18px 28px;
+  background: #d9ff00;
+  color: black;
+  padding: 16px 22px;
   font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.25s;
+  white-space: nowrap;
 }
 
 .task-input-box button:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 0 black;
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0 black;
 }
 
-/* Task List */
+/* TASK LIST */
 .task-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
-/* Task Item */
+/* TASK ITEM */
 .task-item {
   background: white;
   border: 3px solid black;
-  padding: 25px;
+  padding: 18px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  transition: all 0.4s ease;
+  gap: 15px;
+  flex-wrap: wrap; /* FIX OVERLAP */
+  transition: 0.3s;
 }
 
 .task-item:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 0 black;
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 black;
 }
 
-/* Completed Task */
-.done {
-  opacity: 0.75;
-}
-
+/* LEFT SIDE */
 .task-left {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
+  flex: 1;
+  min-width: 200px;
 }
 
+/* TASK TEXT */
 .task-left span {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
-  transition: all 0.3s ease;
+  word-break: break-word;
 }
 
-/* Strike Through */
+/* COMPLETED */
 .completed {
   text-decoration: line-through;
   opacity: 0.6;
 }
 
-/* Checkbox */
+/* DONE */
+.done {
+  opacity: 0.7;
+}
+
+/* CHECKBOX */
 .task-left input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   accent-color: #ff2d20;
-  transition: transform 0.3s ease;
 }
 
-.task-left
-  input[type="checkbox"]:checked {
-  transform: scale(1.15);
+.task-left input[type="checkbox"]:checked {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
-/* Delete Button */
+/* RIGHT SIDE (priority + delete grouping fix) */
+.task-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* PRIORITY BADGE */
+.priority {
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 2px solid black;
+  white-space: nowrap;
+}
+
+/* HIGH */
+.priority.high {
+  background: #ff2d20;
+  color: white;
+}
+
+/* MEDIUM */
+.priority.medium {
+  background: #ffb703;
+  color: black;
+}
+
+/* LOW */
+.priority.low {
+  background: #2a9d8f;
+  color: white;
+}
+
+/* DELETE BUTTON */
 .delete-btn {
-  background: black;
+  background: #d9ff00;
   color: white;
   border: 3px solid black;
-  padding: 12px 22px;
+  padding: 10px 16px;
   cursor: pointer;
   font-weight: 900;
   text-transform: uppercase;
@@ -161,22 +196,22 @@
 }
 
 .delete-btn:hover {
-  background: #ff2d20;
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px 0 black;
+  background: #d9ff00;
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 black;
 }
 
-/* Empty State */
+/* EMPTY STATE */
 .empty {
   text-align: center;
   margin-top: 60px;
   font-size: 1.5rem;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
   .task-container {
-    padding: 40px 20px;
+    padding: 30px 15px;
   }
 
   .task-container h1 {
@@ -187,6 +222,8 @@
     flex-direction: column;
   }
 
+  .task-input-box input,
+  .task-input-box select,
   .task-input-box button {
     width: 100%;
   }
@@ -194,7 +231,11 @@
   .task-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+  }
+
+  .task-right {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .delete-btn {

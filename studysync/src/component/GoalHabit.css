@@ -1,0 +1,192 @@
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN CONTAINER */
+.habit-container {
+  min-height: 100vh;
+  background: black;
+  padding: 60px 50px;
+}
+
+/* HEADING */
+.habit-container h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #d9ff00;
+}
+
+/* INPUT BOX */
+.input-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+/* INPUT */
+.input-box input {
+  flex: 1;
+  min-width: 220px;
+  border: 3px solid black;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  background: white;
+}
+
+/* BUTTON */
+.input-box button {
+  border: 3px solid black;
+  background: #d9ff00;
+  color: black;
+  padding: 15px 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+
+.input-box button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 black;
+}
+
+/* LIST → GRID LAYOUT (IMPORTANT CHANGE) */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* CARD (SMALL RECTANGLE STYLE) */
+.card {
+  background: white;
+  border: 3px solid black;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 150px;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0 black;
+}
+
+/* EMPTY STATE */
+.empty {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+/* HABIT TITLE AREA */
+.habit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TOP ROW */
+.habit-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+}
+
+/* STREAK BADGE */
+.streak {
+  background: #ff2d20;
+  color: white;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  border: 2px solid black;
+}
+
+/* ACTIONS (BOTTOM OF CARD) */
+.habit-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* DONE BUTTON */
+.done-btn {
+  border: 3px solid black;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.25s;
+  font-size: 0.8rem;
+}
+
+.done-btn:hover {
+  background: #ff2d20;
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 black;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  border: 3px solid black;
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.25s;
+  font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+  background: #ff2d20;
+  color: white;
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 black;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .habit-container {
+    padding: 30px 15px;
+  }
+
+  .habit-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box button {
+    width: 100%;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}

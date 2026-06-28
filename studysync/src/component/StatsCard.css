@@ -7,7 +7,7 @@
 
 .features {
   width: 100%;
-  background: #f5f5f5;
+  background: #000000;
   padding: 80px 50px;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
@@ -47,19 +47,19 @@
 /* Alternate brutal colors */
 .feature-card:nth-child(2),
 .feature-card:nth-child(4) {
-  background: #ff2d20;
-  color: white;
+  background: #d9ff00;
+  color: rgb(0, 0, 0);
 }
 
 .feature-card:nth-child(3) {
-  background: black;
+  background: rgb(0, 0, 0);
   color: white;
 }
 
 /* Hover */
 .feature-card:hover {
   transform: translate(-8px, -8px);
-  box-shadow: 8px 8px 0px black;
+  box-shadow: 8px 8px 0px rgb(221, 255, 1);
 }
 
 /* Icon */

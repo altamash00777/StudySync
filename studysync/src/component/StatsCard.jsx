@@ -38,7 +38,7 @@ function StatsCard() {
 
   return (
     <section className="features">
-      <h2>Explore Features</h2>
+      {/* <h2>Explore<span>Features</span> </h2> */}
 
       <div className="features-container">
         {features.map((feature, index) => (

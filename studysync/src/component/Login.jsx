@@ -66,8 +66,8 @@ return (
       <div className="login-left">
 
         <h1>
-          Study
-          <span>Sync</span>
+          Task
+          <span>Pilot</span>
         </h1>
 
         <div className="login-line"></div>

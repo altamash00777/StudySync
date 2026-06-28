@@ -1,5 +1,4 @@
 import "./Hero.css";
-import HomeStats from "./Homestats";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
@@ -36,7 +35,6 @@ const navigate=useNavigate()
           </div>
         </div>
 
-<HomeStats />
 
 
       </div>
@@ -45,3 +43,4 @@ const navigate=useNavigate()
 }
 
 export default Hero;
+

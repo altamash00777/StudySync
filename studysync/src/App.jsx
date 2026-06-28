@@ -8,7 +8,9 @@ import Pomodoro from "./component/Pomodoro";
 import Login from "./component/Login";
 import Signup from "./component/Signup";
 import Calendar from "./component/Calendar";
+import GoalHabit from "./component/GoalHabit";
 import ProtectedRoute from "./component/ProtectedRoute";
+
 
 function App() {
   return (
@@ -19,9 +21,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
-        {/* Protected Layout Route (BEST PRACTICE) */}
+        {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
-          
+
           <Route
             path="/"
             element={
@@ -61,21 +63,29 @@ function App() {
               </>
             }
           />
-      </Route>
-      <Route
-      path="/calendar"
-      element={
-        <>
-        <Navbar/>
-        <Calendar/>
-      </>
-      }
-      >
 
-      </Route>
+          <Route
+            path="/calendar"
+            element={
+              <>
+                <Navbar />
+                <Calendar />
+              </>
+            }
+          />
+
+          <Route
+            path="/goalhabit"
+            element={
+              <>
+                <Navbar />
+                <GoalHabit />
+              </>
+            }
+          />
 
 
-
+        </Route>
 
       </Routes>
     </BrowserRouter>

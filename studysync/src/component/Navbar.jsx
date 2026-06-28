@@ -32,7 +32,7 @@ useState(0);
 
       {/* Logo */}
       <div className="logo">
-        <h2>StudySync</h2>
+        <h2>Task<span> Pilot</span> </h2>
       </div>
 
       {/* Hamburger */}
@@ -82,9 +82,12 @@ useState(0);
             Calendar
           </Link>
         </li>
-
-       
-       
+        
+        <li>
+          <Link to="/GoalHabit">
+          Goal and Habit
+          </Link>
+        </li>
        
        
        

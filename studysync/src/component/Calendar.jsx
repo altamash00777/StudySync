@@ -20,8 +20,6 @@ import {
   orderBy,
 } from "firebase/firestore";
 
-import { updateStreak }
-from "./streak";
 
 function Calendar() {
 

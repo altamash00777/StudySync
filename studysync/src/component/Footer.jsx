@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-inner">
 
         <div className="footer-brand">
-          <h2>STUDYSYNC</h2>
+          <h2>Task<span>Pilot</span></h2>
           <p>Build discipline. Track progress. Stay consistent.</p>
         </div>
 

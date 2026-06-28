@@ -64,7 +64,7 @@ function Signup() {
           <h1>
             Join
             <span>
-              StudySync
+              TaskPilot
             </span>
           </h1>
 

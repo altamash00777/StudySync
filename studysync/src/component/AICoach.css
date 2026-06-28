@@ -1,0 +1,266 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   AI COACH PAGE
+========================= */
+
+.ai-coach-container {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top right,
+      rgba(217,255,0,0.08),
+      transparent 30%),
+    #000;
+
+  padding: 80px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.ai-coach-container h2 {
+  font-size: 4rem;
+  font-weight: 900;
+
+  color: #fff;
+
+  text-align: center;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  position: relative;
+}
+
+.ai-coach-container h2 span {
+  color: #d9ff00;
+
+  text-shadow:
+    0 0 10px #d9ff00,
+    0 0 20px #d9ff00;
+}
+
+.ai-line {
+  width: 120px;
+  height: 4px;
+
+  margin: 25px 0 50px;
+
+  background: #d9ff00;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 10px #d9ff00,
+    0 0 20px #d9ff00;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.generate-btn {
+  background: #d9ff00;
+  color: #000;
+
+  border: none;
+
+  padding: 16px 35px;
+
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  margin-bottom: 40px;
+}
+
+.generate-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 20px rgba(217,255,0,0.4),
+    0 0 40px rgba(217,255,0,0.2);
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   OUTPUT BOX
+========================= */
+
+.plan-box {
+  width: 100%;
+  max-width: 900px;
+
+  min-height: 300px;
+  max-height: 500px;
+
+  background: #0a0a0a;
+
+  border: 1px solid rgba(217,255,0,0.15);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  overflow-y: auto;
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+/* Top Glow Line */
+
+.plan-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #d9ff00;
+
+  box-shadow:
+    0 0 10px #d9ff00,
+    0 0 20px #d9ff00;
+}
+
+.plan-box:hover {
+  border-color: #d9ff00;
+
+  box-shadow:
+    0 0 20px rgba(217,255,0,0.1);
+}
+
+/* =========================
+   AI GENERATED TEXT
+========================= */
+
+.plan-text {
+  white-space: pre-wrap;
+
+  color: #e5e5e5;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.plan-box p {
+  color: #8a8a8a;
+
+  text-align: center;
+
+  line-height: 1.8;
+
+  margin-top: 50px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.plan-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.plan-box::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.plan-box::-webkit-scrollbar-thumb {
+  background: #d9ff00;
+  border-radius: 50px;
+}
+
+.plan-box::-webkit-scrollbar-thumb:hover {
+  background: #c4e600;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.plan-box {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .ai-coach-container h2 {
+    font-size: 3rem;
+  }
+
+  .plan-box {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .ai-coach-container {
+    padding: 60px 20px;
+  }
+
+  .ai-coach-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .generate-btn {
+    width: 100%;
+  }
+
+  .plan-box {
+    min-height: 250px;
+    max-height: 400px;
+
+    padding: 20px;
+  }
+}
